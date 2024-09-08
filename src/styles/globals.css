@@ -18,16 +18,23 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  html,
+  body,
+  #__next {
+    @apply h-full;
+  }
+  section {
+    @apply m-auto w-3/5;
+
+    h2 {
+      @apply uppercase text-3xl text-center mb-8 pt-24;
+    }
+
+    p {
+      @apply mb-4;
+    }
   }
 }
